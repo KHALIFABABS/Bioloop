@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioLoop | À Propos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1a2e2a; line-height: 1.5; }
+    :root { --primary: #2c6e3f; --primary-dark: #1e512e; --gray-soft: #f9fbf8; --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05); }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    .navbar { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.96); backdrop-filter: blur(8px); box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; max-width: 1400px; margin: 0 auto; }
+    .logo { font-size: 1.8rem; font-weight: 700; background: linear-gradient(135deg, #2c6e3f, #4c9a2e); -webkit-background-clip: text; background-clip: text; color: transparent; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { text-decoration: none; font-weight: 500; color: #1e2f2a; transition: all 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .btn-outline-light { background: transparent; border: 1.5px solid var(--primary); padding: 0.5rem 1.3rem; border-radius: 60px; font-weight: 600; color: var(--primary); cursor: pointer; transition: all 0.3s; }
+    .btn-outline-light:hover { background: var(--primary); color: white; }
+    .btn-primary { background: var(--primary); color: white; border: none; padding: 0.7rem 1.8rem; border-radius: 60px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); }
+    .page-header { background: linear-gradient(135deg, #1e4a2f, #2b6e3c); color: white; padding: 4rem 0; text-align: center; }
+    .page-header h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .about-section { padding: 4rem 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0; }
+    .stat-card { text-align: center; padding: 2rem; background: var(--gray-soft); border-radius: 24px; }
+    .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .value-card { padding: 2rem; text-align: center; background: white; border-radius: 24px; box-shadow: var(--shadow-sm); }
+    .value-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem; }
+    .footer {
+      background-color: #0e2a1f;
+      color: #cfdfd3;
+      padding: 3rem 0 2rem;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .partners {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      font-weight: 500;
+    }
+
+    .partners span {
+      font-size: 1rem;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a, .social-icons a {
+      color: #bdd4c2;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover, .social-icons a:hover {
+      color: white;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 1.3rem;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .container {
+        padding: 0 1.5rem;
+      }
+      .split-layout {
+        flex-direction: column;
+      }
+    }</style>
+</head>
+<body>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">BioLoop</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À Propos</a>
+      <a href="contact.html">Contact</a>
+      <button class="btn-outline-light demo-btn">Demander une Démo</button>
+    </div>
+  </div>
+</header>
+
+<section class="page-header">
+  <h1 data-aos="fade-up">À Propos de BioLoop</h1>
+  <p data-aos="fade-up" data-aos-delay="100">Notre mission : accélérer la transition vers une économie circulaire</p>
+</section>
+
+<div class="about-section">
+  <div class="container">
+    <div class="about-grid" data-aos="fade-up">
+      <div>
+        <h2 style="color: var(--primary); margin-bottom: 1rem;">Notre Histoire</h2>
+        <p style="margin-bottom: 1rem;">Fondée en 2025, BioLoop est née d'une conviction forte : les déchets organiques ne sont pas une fin, mais un début. Chaque année, des millions de tonnes de biodéchets sont enfouis ou incinérés, alors qu'ils pourraient devenir une source d'énergie et de fertilité.</p>
+        <p>Aujourd'hui, BioLoop accompagne plus de 150 collectivités et entreprises dans leur transition écologique, grâce à des solutions innovantes de méthanisation, compostage et valorisation des ressources.</p>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?q=80&w=2070&auto=format" style="width: 100%; border-radius: 24px;" alt="équipe BioLoop">
+      </div>
+    </div>
+
+    <div class="stats-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-card"><div class="stat-number">150+</div><p>Clients accompagnés</p></div>
+      <div class="stat-card"><div class="stat-number">85 000 t</div><p>Déchets valorisés/an</p></div>
+      <div class="stat-card"><div class="stat-number">98%</div><p>Satisfaction client</p></div>
+    </div>
+
+    <h2 style="text-align: center; margin: 3rem 0 2rem;" data-aos="fade-up">Nos Valeurs</h2>
+    <div class="values-grid" data-aos="fade-up">
+      <div class="value-card"><i class="fas fa-recycle"></i><h3>Circularité</h3><p>Rien ne se perd, tout se transforme</p></div>
+      <div class="value-card"><i class="fas fa-flask"></i><h3>Innovation</h3><p>Solutions de rupture</p></div>
+      <div class="value-card"><i class="fas fa-users"></i><h3>Impact Social</h3><p>Création d'emplois locaux</p></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="partners"><span>GRY</span><span>EcoFirm</span><span>GreenTech</span><span>BioEnergy</span></div>
+      <div class="footer-links"><a href="#">Mentions légales</a><a href="#">Politique de confidentialité</a></div>
+      <div class="social-icons"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+    </div>
+    <div class="copyright" style="text-align:center; margin-top:2rem;">© 2025 BioLoop – Innover pour un avenir circulaire.</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+  function sendEmail() { window.location.href = "mailto:mbmbow0102@gmail.com?subject=Demande%20de%20démo%20BioLoop&body=Bonjour,%20je%20souhaite%20obtenir%20plus%20d'informations."; }
+  document.querySelectorAll('.demo-btn').forEach(btn => btn.addEventListener('click', sendEmail));
+</script>
+</body>
+</html>
